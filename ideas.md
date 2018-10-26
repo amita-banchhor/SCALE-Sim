@@ -36,9 +36,9 @@ Accelerator is composed of
 dataflow can be:
 ## Weight stationary: (reuse weights, load input)
 
-* _weights_ are loaded once and stored in the _register_ different PEs
-* _inputs_ are loaded from _global memory_ everytime
-* _after parallely multiplying, _psums_ are _spacially_ shared to neighbors for addition
+* __weights__ are loaded once and stored in the __register__ different PEs
+* __inputs__ are loaded from __global memory__ everytime
+* after parallely multiplying, __psums__ are __spacially__ shared to neighbors for addition
 
 inputs are discarded and finall output is shared back to memory. New input is fetched from memory and local register keeps weight.
 This is also typically the least efficient as per yet another eyeriss [paper](https://arxiv.org/pdf/1612.07625.pdf). But this one claims that OS is more efficient than WS 
@@ -46,7 +46,7 @@ This is also typically the least efficient as per yet another eyeriss [paper](ht
 
 ## Output Stationary: (reuse input, load weitghts)
 
-* _weights_ are loaded from _global memory_ everytime
-* _inputs_ are loaded once, then after used, they are _spatially_ shared to other
-* after multiplying, _psums_ are accumulated and stored in _register_ 
+* __weights__ are loaded from __global memory__ everytime
+* __inputs__ are loaded once, then after used, they are __spatially__ shared to other
+* after multiplying, __psums__ are accumulated and stored in __register__ 
 
