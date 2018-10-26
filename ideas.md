@@ -39,6 +39,7 @@ dataflow can be:
 * _weights_ are loaded once and stored in the _register_ different PEs
 * _inputs_ are loaded from _global memory_ everytime
 * _after parallely multiplying, _psums_ are _spacially_ shared to neighbors for addition
+
 inputs are discarded and finall output is shared back to memory. New input is fetched from memory and local register keeps weight.
 This is also typically the least efficient as per yet another eyeriss [paper](https://arxiv.org/pdf/1612.07625.pdf). But this one claims that OS is more efficient than WS 
 
@@ -47,5 +48,5 @@ This is also typically the least efficient as per yet another eyeriss [paper](ht
 
 * _weights_ are loaded from _global memory_ everytime
 * _inputs_ are loaded once, then after used, they are _spatially_ shared to other
-* _after multiplying, _psums_ are accumulated and stored in _register_ 
+* after multiplying, _psums_ are accumulated and stored in _register_ 
 
